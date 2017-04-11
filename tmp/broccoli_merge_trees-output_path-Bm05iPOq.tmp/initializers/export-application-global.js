@@ -1,0 +1,1 @@
+/Users/imaya-pt1372/Documents/personal/tmp/broccoli_merge_trees-input_base_path-3P60D5TC.tmp/15/initializers/export-application-global.js
