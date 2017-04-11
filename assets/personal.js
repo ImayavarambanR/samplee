@@ -95,11 +95,15 @@ define('personal/router', ['exports', 'ember', 'personal/config/environment'], f
 
   Router.map(function () {
     this.route('about');
+    this.route('myself');
   });
 
   exports['default'] = Router;
 });
 define('personal/routes/about', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Route.extend({});
+});
+define('personal/routes/myself', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({});
 });
 define("personal/templates/about", ["exports"], function (exports) {
@@ -189,6 +193,47 @@ define("personal/templates/application", ["exports"], function (exports) {
         return morphs;
       },
       statements: [["inline", "partial", ["navbar"], [], ["loc", [null, [2, 2], [2, 22]]]], ["content", "outlet", ["loc", [null, [3, 2], [3, 12]]]]],
+      locals: [],
+      templates: []
+    };
+  })());
+});
+define("personal/templates/myself", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@1.13.11",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 0
+          }
+        },
+        "moduleName": "personal/templates/myself.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(1);
+        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+        dom.insertBoundary(fragment, 0);
+        return morphs;
+      },
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]]]],
       locals: [],
       templates: []
     };
@@ -472,8 +517,8 @@ define("personal/templates/navbar", ["exports"], function (exports) {
 
 /* jshint ignore:start */
 
-define('ImayavarambanR.github.io/config/environment', ['ember'], function(Ember) {
-  var prefix = 'ImayavarambanR.github.io';
+define('personal/config/environment', ['ember'], function(Ember) {
+  var prefix = 'personal';
 /* jshint ignore:start */
 
 try {
@@ -492,7 +537,7 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("ImayavarambanR.github.io/app")["default"].create({"name":"personal","version":"0.0.0+7eb54082"});
+  require("personal/app")["default"].create({"name":"personal","version":"0.0.0+b9f9408c"});
 }
 
 /* jshint ignore:end */

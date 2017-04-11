@@ -120,6 +120,15 @@ define('personal/tests/routes/about.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/about.js should pass jshint.');
   });
 });
+define('personal/tests/routes/myself.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - routes/myself.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/myself.js should pass jshint.');
+  });
+});
 define('personal/tests/test-helper', ['exports', 'personal/tests/helpers/resolver', 'ember-qunit'], function (exports, _personalTestsHelpersResolver, _emberQunit) {
 
   (0, _emberQunit.setResolver)(_personalTestsHelpersResolver['default']);
@@ -154,9 +163,30 @@ define('personal/tests/unit/routes/about-test.jshint', ['exports'], function (ex
     assert.ok(true, 'unit/routes/about-test.js should pass jshint.');
   });
 });
+define('personal/tests/unit/routes/myself-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:myself', 'Unit | Route | myself', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('personal/tests/unit/routes/myself-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/routes/myself-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/myself-test.js should pass jshint.');
+  });
+});
 /* jshint ignore:start */
 
-require('ImayavarambanR.github.io/tests/test-helper');
+require('personal/tests/test-helper');
 EmberENV.TESTS_FILE_LOADED = true;
 
 /* jshint ignore:end */
