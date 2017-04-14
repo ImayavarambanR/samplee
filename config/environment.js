@@ -4,8 +4,23 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'personal',
     environment: environment,
-    baseURL: '/',
+    baseURL: 'https://imayavarambanr.github.io/samplee/',
     locationType: 'auto',
+
+    firebase: {
+      apiKey: "AIzaSyAB_Fwgs9Ae5R1LCKoRq1q0ShCGihGqATs",
+      authDomain: "samplee-a70d2.firebaseapp.com",
+      databaseURL: "https://samplee-a70d2.firebaseio.com",
+      storageBucket: "samplee-a70d2.appspot.com",
+      messagingSenderId: "426805753692"
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

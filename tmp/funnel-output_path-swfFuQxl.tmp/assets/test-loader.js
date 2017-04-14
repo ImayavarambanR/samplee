@@ -1,1 +1,0 @@
-/Users/imaya-pt1372/Documents/personal/tmp/funnel-input_base_path-0eLR7g9z.tmp/bower_components/ember-cli-test-loader/test-loader.js

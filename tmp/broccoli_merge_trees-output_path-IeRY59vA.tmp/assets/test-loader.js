@@ -1,1 +1,0 @@
-/Users/imaya-pt1372/Documents/personal/bower_components/ember-cli-test-loader/test-loader.js
